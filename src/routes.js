@@ -1,7 +1,5 @@
 const express = require('express');
 const Saml2js = require('saml2js');
-const fs = require('fs');
-const path = require('path')
 
 const passport = require('./config/passportHandler');
 const authController = require('./controllers/auth');
@@ -25,8 +23,6 @@ router.post('/login/sso/callback', passport.authenticate('mySamlStrategy', {
 }, authController.auth);
 
 router.get('/metadata', (req, res) => {
-    //filePath = path.join(__dirname, 'certs/idp.crt');
-    //var decryptionCert = fs.readFileSync(filePath, 'utf-8')
     res.type('application/xml');
     return res.status(200).send(samlStrategy.generateServiceProviderMetadata());
 });
