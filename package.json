@@ -1,0 +1,19 @@
+{
+  "name": "sso-nodejs",
+  "version": "1.0.0",
+  "main": "./src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-saml": "^3.1.2",
+    "saml2js": "^0.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
