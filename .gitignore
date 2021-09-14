@@ -3,4 +3,3 @@ certs
 *.crt
 *.key
 .env
-*.lock
