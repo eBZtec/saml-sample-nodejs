@@ -9,8 +9,6 @@ passport.deserializeUser((user, done) => {
     done(null, user);
 });
 
-const strategy = samlStrategy;
-
-passport.use('mySamlStrategy' ,strategy);
+passport.use('mySamlStrategy' , samlStrategy);
 
 module.exports = passport;

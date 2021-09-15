@@ -1,9 +1,7 @@
 module.exports = {
     auth (req, res) {
         try {
-            const { samlUserObject } = req;
-
-            return res.send(samlUserObject);
+            return res.redirect('/user/v1/protected');
         } catch(err) {
             return res.status(500).send(err);
         }
