@@ -16,7 +16,7 @@ var iAuthenticated = (req, res, next) => {
 
 router.get('/login/sso', passport.authenticate('mySamlStrategy', {
     successRedirect: '/',
-    failureRedirect: '/login',
+    failureRedirect: '/user/v1/login/sso',
 }));
 
 router.post('/login/sso/callback', passport.authenticate('mySamlStrategy', {
